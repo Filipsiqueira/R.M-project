@@ -4,13 +4,14 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #eee;
+  background-color: rgba(20, 20, 20, 0.8);
   font-family: "Roboto", sans-serif;
 }
 h1 {
   text-align: center;
   font-weight: 500;
   padding: 20px;
+  color: #d9e2cf;
 }
 .card-character {
   position: relative;
@@ -19,16 +20,21 @@ h1 {
   align-items: end;
   list-style: none;
   padding: 40px;
-  background-color: #fff;
   margin: 15px;
   width: 50%;
   height: 45%;
   border-radius: 25px;
   box-shadow: 7px 7px 15px rgba(122, 122, 122, 0.5);
   cursor: pointer;
+  background-color: rgba(43, 42, 42, 0.5);
 }
 .card-character h2 {
   font-weight: 300;
+  color: #d9e2cf;
+}
+.card-character h2:hover {
+  transition: 0.2s;
+  color: #6eb41e;
 }
 .card-img {
   height: 45%;
@@ -41,4 +47,39 @@ h1 {
   flex-wrap: wrap;
   width: 100%;
   padding: 20px;
+}
+.loarder-container {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: opacity 0.2s ease-in;
+}
+.show {
+  opacity: 1;
+}
+.loader {
+  display: flex;
+  padding: 12px;
+  margin-bottom: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: #60a512;
+  animation: loading-animation 0.8s ease-in-out infinite alternate;
+}
+.loader:nth-child(1) {
+  animation-delay: -0.4s;
+}
+.loader:nth-child(2) {
+  animation-delay: -0.2s;
+}
+@keyframes loading-animation {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
 }
