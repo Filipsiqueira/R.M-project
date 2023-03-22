@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eee;
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  text-align: center;
+  font-weight: 500;
+  padding: 20px;
+}
+.card-character {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+  list-style: none;
+  padding: 40px;
+  background-color: #fff;
+  margin: 15px;
+  width: 50%;
+  height: 45%;
+  border-radius: 25px;
+  box-shadow: 7px 7px 15px rgba(122, 122, 122, 0.5);
+  cursor: pointer;
+}
+.card-character h2 {
+  font-weight: 300;
+}
+.card-img {
+  height: 45%;
+  position: relative;
+  border-radius: 80%;
+}
+.container-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+}
