@@ -14,10 +14,9 @@ h1 {
   color: #d9e2cf;
 }
 .card-character {
-  position: relative;
   display: flex;
   justify-content: flex-start;
-  align-items: end;
+  align-items: center;
   list-style: none;
   padding: 40px;
   margin: 15px;
@@ -25,20 +24,19 @@ h1 {
   height: 45%;
   border-radius: 25px;
   box-shadow: 7px 7px 15px rgba(122, 122, 122, 0.5);
-  cursor: pointer;
   background-color: rgba(43, 42, 42, 0.5);
 }
 .card-character h2 {
   font-weight: 300;
+  margin-left: 15px;
   color: #d9e2cf;
 }
-.card-character h2:hover {
-  transition: 0.2s;
-  color: #6eb41e;
+.status {
+  margin-left: 10px;
+  color: #d9e2cf;
 }
 .card-img {
-  height: 45%;
-  position: relative;
+  height: 30%;
   border-radius: 80%;
 }
 .container-cards {

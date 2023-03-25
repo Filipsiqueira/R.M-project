@@ -1,7 +1,7 @@
 const containerCards = document.querySelector(".container-cards");
 const loaderContainer = document.querySelector(".loarder-container");
 let page = 1;
-const getUrl = async () => {
+const getData = async () => {
   const request = await fetch(
     `https://rickandmortyapi.com/api/character?page=${page}`,
   );
@@ -9,14 +9,16 @@ const getUrl = async () => {
   return data.results;
 };
 const insertHtml = async () => {
-  const characters = await getUrl();
+  const characters = await getData();
   const templateHtml = characters.reduce((acc, item) => {
     acc += `<li class="card-character">
               <img/ class="card-img" alt="${item.name}" src="https://rickandmortyapi.com/api/character/avatar/${item.id}.jpeg" >
-               <h2>${item.name}</h2>
+               <h2 class="title-card">${item.name}</h2>
+               <span class="status">  Status: <strong>${item.status}</strong> </span>
             </li>`;
     return acc;
   }, "");
+
   containerCards.innerHTML += templateHtml;
 };
 insertHtml();
