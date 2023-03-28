@@ -35,6 +35,13 @@ h1 {
   margin-left: 10px;
   color: #d9e2cf;
 }
+.alive {
+  color: #60a512;
+}
+.dead {
+  color: #fc0120;
+}
+
 .card-img {
   height: 30%;
   border-radius: 80%;

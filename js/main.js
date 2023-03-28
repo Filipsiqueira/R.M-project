@@ -20,12 +20,26 @@ const insertHtml = async () => {
   }, "");
 
   containerCards.innerHTML += templateHtml;
+  const AllStatus = document.querySelectorAll("strong");
+  showStatus(AllStatus);
 };
 insertHtml();
 
 const insertNextCharacters = async () => {
   page++;
   insertHtml();
+};
+
+const showStatus = (elements) => {
+  elements.forEach((el) => {
+    if (el.innerHTML === "Alive") {
+      el.classList.add("alive");
+    } else if (el.innerHTML === "Dead") {
+      el.classList.add("dead");
+    } else {
+      return;
+    }
+  });
 };
 
 const showLoader = () => {
