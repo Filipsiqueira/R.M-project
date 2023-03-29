@@ -1,4 +1,4 @@
-const containerCards = document.querySelector(".container-cards");
+const containerCards = document.querySelector(".cards-container");
 const loaderContainer = document.querySelector(".loarder-container");
 let page = 1;
 const getData = async () => {

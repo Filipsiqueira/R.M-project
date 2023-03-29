@@ -46,7 +46,7 @@ h1 {
   height: 30%;
   border-radius: 80%;
 }
-.container-cards {
+.cards-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
