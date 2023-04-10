@@ -10,11 +10,11 @@ const getData = async () => {
 };
 const insertHtml = async () => {
   const characters = await getData();
-  const templateHtml = characters.reduce((acc, item) => {
+  const templateHtml = characters.reduce((acc, { name, id, status }) => {
     acc += `<li class="card-character">
-              <img/ class="card-img" alt="${item.name}" src="https://rickandmortyapi.com/api/character/avatar/${item.id}.jpeg" >
-               <h2 class="title-card">${item.name}</h2>
-               <span class="status">  Status: <strong>${item.status}</strong> </span>
+              <img class="card-img" alt="${name}" src="https://rickandmortyapi.com/api/character/avatar/${id}.jpeg" />
+               <h2 class="title-card">${name}</h2>
+               <span class="status">  Status: <strong>${status}</strong> </span>
             </li>`;
     return acc;
   }, "");

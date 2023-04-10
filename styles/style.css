@@ -13,19 +13,26 @@ h1 {
   padding: 20px;
   color: #d9e2cf;
 }
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+}
 .card-character {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   list-style: none;
-  padding: 40px;
+  padding: 20px;
   margin: 15px;
-  width: 50%;
-  height: 45%;
+  width: 40%;
+  height: 35%;
   border-radius: 25px;
   box-shadow: 7px 7px 15px rgba(122, 122, 122, 0.5);
   background-color: rgba(43, 42, 42, 0.5);
 }
+
 .card-character h2 {
   font-weight: 300;
   margin-left: 15px;
@@ -35,6 +42,9 @@ h1 {
   margin-left: 10px;
   color: #d9e2cf;
 }
+.status strong {
+  font-weight: 500;
+}
 .alive {
   color: #60a512;
 }
@@ -43,15 +53,9 @@ h1 {
 }
 
 .card-img {
-  height: 30%;
+  width: 45%;
+  height: 35%;
   border-radius: 80%;
-}
-.cards-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 20px;
 }
 .loarder-container {
   opacity: 0;
@@ -86,5 +90,173 @@ h1 {
   }
   to {
     transform: translateY(100%);
+  }
+}
+@media screen and (min-width: 375px), (max-width: 414px) {
+  h1 {
+    width: 100%;
+    padding: 20px;
+  }
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+  }
+  .card-character {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 20px;
+    margin: 15px;
+    width: 100%;
+    height: 35%;
+    border-radius: 25px;
+    box-shadow: 7px 7px 15px rgba(122, 122, 122, 0.5);
+    background-color: rgba(43, 42, 42, 0.5);
+  }
+
+  .card-character h2 {
+    font-size: 14px;
+  }
+  .status {
+    font-size: 12px;
+    margin-left: 10px;
+    color: #d9e2cf;
+  }
+  .status strong {
+    font-weight: 500;
+  }
+  .alive {
+    color: #60a512;
+  }
+  .dead {
+    color: #fc0120;
+  }
+
+  .card-img {
+    width: 50%;
+    height: 25%;
+    border-radius: 80%;
+  }
+  .loarder-container {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: opacity 0.2s ease-in;
+  }
+  .show {
+    opacity: 1;
+  }
+  .loader {
+    display: flex;
+    padding: 12px;
+    margin-bottom: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: #60a512;
+    animation: loading-animation 0.8s ease-in-out infinite alternate;
+  }
+  .loader:nth-child(1) {
+    animation-delay: -0.4s;
+  }
+  .loader:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  @keyframes loading-animation {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+}
+@media screen and (max-width: 250px) {
+  h1 {
+    width: 100%;
+    padding: 20px;
+  }
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+  }
+  .card-character {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 20px;
+    margin: 15px;
+    width: 100%;
+    height: 35%;
+    border-radius: 25px;
+    box-shadow: 7px 7px 15px rgba(122, 122, 122, 0.5);
+    background-color: rgba(43, 42, 42, 0.5);
+  }
+
+  .card-character h2 {
+    display: none;
+  }
+  .status {
+    display: none;
+    margin-left: 10px;
+    color: #d9e2cf;
+  }
+  .status strong {
+    font-weight: 500;
+  }
+  .alive {
+    color: #60a512;
+  }
+  .dead {
+    color: #fc0120;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 35%;
+    border-radius: 80%;
+  }
+  .loarder-container {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: opacity 0.2s ease-in;
+  }
+  .show {
+    opacity: 1;
+  }
+  .loader {
+    display: flex;
+    padding: 12px;
+    margin-bottom: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: #60a512;
+    animation: loading-animation 0.8s ease-in-out infinite alternate;
+  }
+  .loader:nth-child(1) {
+    animation-delay: -0.4s;
+  }
+  .loader:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  @keyframes loading-animation {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(100%);
+    }
   }
 }
